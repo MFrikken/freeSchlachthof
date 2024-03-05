@@ -30,7 +30,7 @@ body {
   padding-top:110px
 }
 body:before {
-  content:url(../Images/logo.svg);
+  content:url(../images/logo-single.svg);
   position:absolute;
   top:0;
   left:50%;

@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <meta charset="utf-8">
+  <!--
+    ======= Umsetzung und Wartung: cron IT GmbH, www.cron.eu =======
+
+    This website is powered by TYPO3 - inspiring people to share!
+    TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+    TYPO3 is copyright 1998-2024 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+    Information and contribution at https://typo3.org/
+  -->
+
+
+
+  <title>Intranet</title>
+  <meta name="generator" content="TYPO3 CMS" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="stylesheet" href="/css/intranet.min.css" media="all">
+  <link rel="stylesheet" href="/css/print.min.css" media="print">
+  <link href="/css/news-basic.css" rel="stylesheet" >
+
+
+
+  <script src="/typo3conf/ext/hsos_core/Resources/Public/JavaScript/Intranet/head.min.js?1705579863"></script>
+
+
+
+  <script type="text/javascript">
+    !function(){"use strict";function e(e,t,o){e.addEventListener?e.addEventListener(t,o,!1):e.attachEvent&&e.attachEvent("on"+t,o)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function o(){if(window.localStorage&&window.XMLHttpRequest)if(t(a))n(localStorage.font_css_cache);else{var e=new XMLHttpRequest;e.open("GET",a,!0),e.onreadystatechange=function(){4===e.readyState&&(n(e.responseText),localStorage.font_css_cache=e.responseText,localStorage.font_css_cache_file=a)},e.send()}else{var o=document.createElement("link");o.href=a,o.rel="stylesheet",o.type="text/css",document.getElementsByTagName("head")[0].appendChild(o),document.cookie="font_css_cache"}}function n(e){var t=document.createElement("style");t.setAttribute("type","text/css"),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var c=function(e){if(!window.FontFace)return!1;var t=new FontFace("t",'url( "data:application/font-woff2;base64,d09GMgABAAAAAAIkAAoAAAAABVwAAAHcAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABlYAgloKLEoBNgIkAxgLDgAEIAWDcgc1G7IEyB6SJAFID5YA3nAHC6h4+H7s27nP1kTyOoQkGuJWtNGIJKYznRI3VEL7IaHq985ZUuKryZKcAtJsi5eULwUybm9KzajBBhywZ5ZwoJNuwDX5C/xBjvz5DbsoNsvG1NGQiqp0NMLZ7JlnW+5MaM3HwcHheUQeiVokekHkn/FRdefvJaTp2PczN+I1Sc3k9VuX51Tb0Tqqf1deVXGdJsDOhz0/EffMOPOzHNH06pYkDDjs+P8fb/z/8n9Iq8ITzWywkP6PBMMN9L/O7vY2FNoTAkp5PpD6g1nV9WmyQnM5uPpAMHR2fe06jbfvzPriekVTQxC6lpKr43oDtRZfCATl5OVAUKykqwm9o8R/kg37cxa6eZikS7cjK4aIwoyh6jOFplhFrz2b833G3Jii9AjDUiAZ9AxZtxdEYV6imvRF0+0Nej3wu6nPZrTLh81AVcV3kmMVdQj6Qbe9qetzbuDZ7vXOlRrqooFSxCv6SfrDICA6rnHZXQPVcUHJYGcoqa3jVH7ATrjWBNYYkEqF3RFpVIl0q2JvMOJd7/TyjXHw2NyAuJpNaEbz8RTEVtCbSH7JrwQQOqwGl7sTUOtdBZIY2DKqKlvOmPvUxJaURAZZcviTT0SKHCXqzwc=" ) format( "woff2" )',{});return t.load()["catch"](function(){}),"loading"==t.status||"loaded"==t.status}(this),a="/typo3conf/ext/hsos_core/Resources/Public/Fonts/fonts_remix.yaf9.woff.css";c&&(a="/typo3conf/ext/hsos_core/Resources/Public/Fonts/fonts_remix.y41c.woff2.css"),window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?o():e(window,"load",o)}();
+  </script>
+
+</head>
+<body data-typo3-context="production">
+
+
+
+
+
+
+
+
+
+
+
+<div class="o-header__skipToContent">
+  <ul>
+    <li>
+      <a href="#main-content">Zum Inhalt</a>
+    </li>
+  </ul>
+</div>
+
+<header class="o-header">
+  <nav aria-label="">
+    <div class="o-header__desktop hidden-xs">
+
+
+      <div class="o-headerDesktop">
+        <div class="o-headerDesktop__sticky">
+          <div class="o-headerDesktop__stickyContent">
+            <div class="o-headerDesktop__stickyServiceNavigation">
+
+
+              <div class="o-headerDesktopServiceNavigation">
+                <div class="container o-headerDesktopServiceNavigation__linksContainer">
+                  <div class="o-headerDesktopServiceNavigation__linksInner">
+                    <ul id="" class="o-headerDesktopServiceNavigation__links" aria-label="Wichtige Tools">
+
+                      <li>
+                        <a href="https://lms.hs-osnabrueck.de/saml.php?target=root_1&amp;client_id=hsos&amp;cmd=force_login&amp;lang=de" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                          <span class="o-headerDesktopServiceNavigation__linkText">ILIAS</span>
+                          <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://ecampus.hs-osnabrueck.de/hsos-sso" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                          <span class="o-headerDesktopServiceNavigation__linkText">eCampus</span>
+                          <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://netcase.hs-osnabrueck.de:8443/oc-shib" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                          <span class="o-headerDesktopServiceNavigation__linkText">NetCase</span>
+                          <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://eventhos.hs-osnabrueck.de/intern" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                          <span class="o-headerDesktopServiceNavigation__linkText">eventHOS</span>
+                          <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://outlook.com/owa/hs-osnabrueck.de" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                          <span class="o-headerDesktopServiceNavigation__linkText">Mail</span>
+                          <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://servicedesk.hs-osnabrueck.de" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                          <span class="o-headerDesktopServiceNavigation__linkText">ServiceDesk</span>
+                          <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://praxiko.hs-osnabrueck.de" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                          <span class="o-headerDesktopServiceNavigation__linkText">Praxiko</span>
+                          <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="o-headerDesktop__stickyBar">
+
+
+              <div class="o-headerDesktopStickyBar">
+                <div class="container o-headerDesktopStickyBar__container">
+                  <div class="o-headerDesktopStickyBar__content">
+                    <a href="#" class="o-headerDesktopStickyBar__burgerMenu">
+                      <i class="o-headerDesktopStickyBar__burgerMenuIcon icon-menu"></i>
+                      <span class="sr-only">Menü öffnen</span>
+                    </a>
+
+                    <div class="o-headerDesktopStickyBar__centerContainer">
+                      <a href="/" class="o-headerDesktopStickyBar__homeLink">
+                            <span class="o-headerDesktopStickyBar__title">
+                                Intranet
+                            </span>
+                        <span class="o-headerDesktopStickyBar__headline">
+                                Hochschule Osnabrück
+                            </span>
+                        <span class="o-headerDesktopStickyBar__subline">
+                                University of applied sciences
+                            </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-headerDesktop__serviceNavigation">
+          <div class="o-headerDesktop__serviceNavigationContent">
+
+
+            <div class="o-headerDesktopServiceNavigation">
+              <div class="container o-headerDesktopServiceNavigation__linksContainer">
+                <div class="o-headerDesktopServiceNavigation__linksInner">
+                  <ul id="" class="o-headerDesktopServiceNavigation__links" aria-label="Wichtige Tools">
+
+                    <li>
+                      <a href="https://lms.hs-osnabrueck.de/saml.php?target=root_1&amp;client_id=hsos&amp;cmd=force_login&amp;lang=de" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                        <span class="o-headerDesktopServiceNavigation__linkText">ILIAS</span>
+                        <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://ecampus.hs-osnabrueck.de/hsos-sso" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                        <span class="o-headerDesktopServiceNavigation__linkText">eCampus</span>
+                        <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://netcase.hs-osnabrueck.de:8443/oc-shib" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                        <span class="o-headerDesktopServiceNavigation__linkText">NetCase</span>
+                        <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://eventhos.hs-osnabrueck.de/intern" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                        <span class="o-headerDesktopServiceNavigation__linkText">eventHOS</span>
+                        <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://outlook.com/owa/hs-osnabrueck.de" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                        <span class="o-headerDesktopServiceNavigation__linkText">Mail</span>
+                        <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://servicedesk.hs-osnabrueck.de" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                        <span class="o-headerDesktopServiceNavigation__linkText">ServiceDesk</span>
+                        <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://praxiko.hs-osnabrueck.de" target="_blank" class="o-headerDesktopServiceNavigation__link">
+                        <span class="o-headerDesktopServiceNavigation__linkText">Praxiko</span>
+                        <i class="icon-chevrons-right o-headerDesktopServiceNavigation__linkIcon" aria-hidden="true"></i>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-headerDesktop__mainNavigation">
+          <div class="o-headerDesktop__mainNavigationContent">
+            <div class="o-headerDesktop__mainNavigationSticky">
+
+
+              <div class="o-headerDesktopMainNavigation">
+                <div class="o-headerDesktopMainNavigation__content">
+                  <div class="o-headerDesktopMainNavigation__topOuterContainer">
+                    <div class="container o-headerDesktopMainNavigation__topContainer">
+                      <div class="o-headerDesktopMainNavigation__topInnerContainer">
+                        <div class="o-headerDesktopMainNavigation__leftContainer">
+                          <a href="https://www.hs-osnabrueck.de/" class="o-headerDesktopMainNavigation__logoLink">
+                            <img class="o-headerDesktopMainNavigation__logo" src="/images/logo-single.svg" alt="Hochschule Osnabrück Logo">
+                            <span class="o-headerDesktopMainNavigation__logoText">
+                                        <span class="o-headerDesktopMainNavigation__logoHeadline">Hochschule Osnabrück</span>
+                                        <span class="o-headerDesktopMainNavigation__logoSubline">University of applied sciences</span>
+                                    </span>
+                          </a>
+                        </div>
+
+                        <a href="#" class="o-headerDesktopMainNavigation__closeMenu">
+                          <i class="o-headerDesktopMainNavigation__closeMenuIcon icon-close"></i>
+                          <span class="sr-only">Menü schließen</span>
+                        </a>
+
+                        <div class="o-headerDesktopMainNavigation__centerContainer">
+                          <a href="/" class="o-headerDesktopMainNavigation__homeLink">
+                                    <span class="o-headerDesktopMainNavigation__title">
+                                        Intranet
+                                    </span>
+                            <span class="o-headerDesktopMainNavigation__headline">
+                                        Hochschule Osnabrück
+                                    </span>
+                            <span class="o-headerDesktopMainNavigation__subline">
+                                        University of applied sciences
+                                    </span>
+                          </a>
+                        </div>
+
+                        <div class="o-headerDesktopMainNavigation__rightContainer">
+                          <div class="o-headerDesktopMainNavigation__searchContainer">
+
+
+                            <div class="o-headerDesktopMainNavigationSearch">
+                              <a href="#" class="o-headerDesktopMainNavigationSearch__button" aria-haspopup="true" aria-expanded="false" aria-controls="headerDesktopMainNavigationSearch__dropdown">
+                                <span class="o-headerDesktopMainNavigationSearch__searchOpen"><i class="icon-search" aria-hidden="true"></i><span class="sr-only">Suchen</span></span>
+                                <span class="o-headerDesktopMainNavigationSearch__searchClose">Suche schließen <i class="icon-close o-headerDesktopMainNavigationSearch__searchCloseIcon" aria-hidden="true"></i></span>
+                              </a>
+
+                              <div id="headerDesktopMainNavigationSearch__dropdown" class="o-headerDesktopMainNavigationSearch__dropdownContainer" aria-labelledby="headerDesktopMainNavigationSearch__link">
+                                <div class="o-headerDesktopMainNavigationSearch__dropdownContent">
+
+
+                                  <form method="get" action="/suche/" class="m-searchForm">
+                                    <input class="m-searchForm__input"
+                                           type="text"
+                                           id="search-form"
+                                           name="tx_solr[q]"
+                                           data-search-uri="/suche/solr-search.json"
+                                           data-suggest-uri="/suche/solr-suggest.json"
+                                           placeholder="Suchbegriff eingeben" />
+                                    <button class="m-searchForm__submit" type="submit">Suchen</button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="o-headerDesktopMainNavigation__languageSwitchContainer">
+
+                            <a class="o-headerDesktopMainNavigation__languageSwitch"
+                               href="/en/"
+                               title="Switch language">
+                              EN
+                            </a>
+
+                          </div>
+                          <div class="o-headerDesktopMainNavigation__profileContainer">
+
+
+                            <div class="o-headerDesktopMainNavigationProfile">
+                              <a href="#" class="o-headerDesktopMainNavigationProfile__button" aria-controls="">
+
+                                <i class="icon-account o-headerDesktopMainNavigationProfile__buttonProfileIcon" aria-hidden="true"></i> robiwulf <i class="icon-chevron-down o-headerDesktopMainNavigationProfile__buttonArrowIcon" aria-hidden="true"></i>
+                              </a>
+
+                              <div class="o-headerDesktopMainNavigationProfile__dropdownContainer">
+                                <div class="o-headerDesktopMainNavigationProfile__dropdownContent">
+                                  <ul class="o-headerDesktopMainNavigationProfile__dropdownLinks">
+
+
+                                    <li class="o-headerDesktopMainNavigationProfile__dropdownLinkItem">
+                                      <a href="https://profile.hs-osnabrueck.de/profileaddresses" target="_blank" class="o-headerDesktopMainNavigationProfile__dropdownLink">
+                                        <i class="icon-chevron-right o-headerDesktopMainNavigationProfile__dropdownLinkIcon" aria-hidden="true"></i> Mein Profil
+                                      </a>
+                                    </li>
+
+                                    <li class="o-headerDesktopMainNavigationProfile__dropdownLinkItem">
+                                      <a href="https://profile.hs-osnabrueck.de/campuscard" target="_blank" class="o-headerDesktopMainNavigationProfile__dropdownLink">
+                                        <i class="icon-chevron-right o-headerDesktopMainNavigationProfile__dropdownLinkIcon" aria-hidden="true"></i> Meine CampusCard
+                                      </a>
+                                    </li>
+
+                                    <li class="o-headerDesktopMainNavigationProfile__dropdownLinkItem">
+                                      <a href="https://my.hs-osnabrueck.de/sspr/" target="_blank" class="o-headerDesktopMainNavigationProfile__dropdownLink">
+                                        <i class="icon-chevron-right o-headerDesktopMainNavigationProfile__dropdownLinkIcon" aria-hidden="true"></i> Passwort ändern
+                                      </a>
+                                    </li>
+
+
+                                    <li class="o-headerDesktopMainNavigationProfile__dropdownLinkItem">
+                                      <a href="/?logintype=logout" class="o-headerDesktopMainNavigationProfile__dropdownLink">
+                                        <i class="icon-chevron-right o-headerDesktopMainNavigationProfile__dropdownLinkIcon" aria-hidden="true"></i> Abmelden
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="o-headerDesktopMainNavigation__navigationOuterContainer">
+                    <div class="container o-headerDesktopMainNavigation__navigationContainer">
+                      <ul class="o-headerDesktopMainNavigation__navigationItems">
+
+
+
+                        <li class="o-headerDesktopMainNavigationItem">
+                          <a href="/themen-a-z-studierende/" target="" class="o-headerDesktopMainNavigationItem__link">
+                            Themen A-Z
+
+                          </a>
+
+                        </li>
+
+
+
+                        <li class="o-headerDesktopMainNavigationItem -hasSubpages">
+                          <a href="/studienalltag/" target="" class="o-headerDesktopMainNavigationItem__link">
+                            Studienalltag
+
+                            <i class="icon-chevron-down o-headerDesktopMainNavigationItem__linkIcon" aria-hidden="true"></i>
+
+                          </a>
+
+                          <div class="o-headerDesktopMainNavigationItem__dropdownContainer">
+                            <div class="o-headerDesktopMainNavigationItem__dropdownConnector"></div>
+                            <div class="o-headerDesktopMainNavigationItem__dropdownContent">
+                              <ul class="o-headerDesktopMainNavigationItem__dropdownLinks">
+
+                                <li class="o-headerDesktopMainNavigationItem__dropdownLinkItem">
+                                  <a href="/studienalltag/bibliothek/" target="" class="o-headerDesktopMainNavigationItem__dropdownLink">
+                                    <i class="icon-chevron-right o-headerDesktopMainNavigationItem__dropdownLinkIcon" aria-hidden="true"></i> Bibliothek
+                                  </a>
+                                </li>
+
+                                <li class="o-headerDesktopMainNavigationItem__dropdownLinkItem">
+                                  <a href="/studienalltag/it-und-netzwerk/" target="" class="o-headerDesktopMainNavigationItem__dropdownLink">
+                                    <i class="icon-chevron-right o-headerDesktopMainNavigationItem__dropdownLinkIcon" aria-hidden="true"></i> IT und Netzwerk
+                                  </a>
+                                </li>
+
+                                <li class="o-headerDesktopMainNavigationItem__dropdownLinkItem">
+                                  <a href="https://ecampus.hs-osnabrueck.de/hsos-sso" target="_blank" class="o-headerDesktopMainNavigationItem__dropdownLink">
+                                    <i class="icon-chevron-right o-headerDesktopMainNavigationItem__dropdownLinkIcon" aria-hidden="true"></i> eCampus
+                                  </a>
+                                </li>
+
+                                <li class="o-headerDesktopMainNavigationItem__dropdownLinkItem">
+                                  <a href="/infothek/studierendensekretariat/pruefungsangelegenheiten/" target="" class="o-headerDesktopMainNavigationItem__dropdownLink">
+                                    <i class="icon-chevron-right o-headerDesktopMainNavigationItem__dropdownLinkIcon" aria-hidden="true"></i> Prüfungen und Studienordnungen
+                                  </a>
+                                </li>
+
+                                <li class="o-headerDesktopMainNavigationItem__dropdownLinkItem">
+                                  <a href="https://www.hs-osnabrueck.de/elearning-competence-center/etools-fuer-studierende/" target="_blank" class="o-headerDesktopMainNavigationItem__dropdownLink">
+                                    <i class="icon-chevron-right o-headerDesktopMainNavigationItem__dropdownLinkIcon" aria-hidden="true"></i> eTools für Studierende
+                                  </a>
+                                </li>
+
+                                <li class="o-headerDesktopMainNavigationItem__dropdownLinkItem">
+                                  <a href="https://www.studentenwerk-osnabrueck.de/de/essen.html" target="_blank" class="o-headerDesktopMainNavigationItem__dropdownLink">
+                                    <i class="icon-chevron-right o-headerDesktopMainNavigationItem__dropdownLinkIcon" aria-hidden="true"></i> Mensa
+                                  </a>
+                                </li>
+
+                                <li class="o-headerDesktopMainNavigationItem__dropdownLinkItem">
+                                  <a href="https://praxiko.hs-osnabrueck.de" target="_blank" class="o-headerDesktopMainNavigationItem__dropdownLink">
+                                    <i class="icon-chevron-right o-headerDesktopMainNavigationItem__dropdownLinkIcon" aria-hidden="true"></i> Praxiko
+                                  </a>
+                                </li>
+
+                                <li class="o-headerDesktopMainNavigationItem__dropdownLinkItem">
+                                  <a href="https://www.hs-osnabrueck.de/studium/studienangebot/studiengaenge-a-z/" target="_blank" class="o-headerDesktopMainNavigationItem__dropdownLink">
+                                    <i class="icon-chevron-right o-headerDesktopMainNavigationItem__dropdownLinkIcon" aria-hidden="true"></i> Studienverlaufsplan
+                                  </a>
+                                </li>
+
+                              </ul>
+                            </div>
+                          </div>
+
+                        </li>
+
+
+
+                        <li class="o-headerDesktopMainNavigationItem">
+                          <a href="/serviceangebote-studierende/" target="" class="o-headerDesktopMainNavigationItem__link">
+                            Serviceangebote
+
+                          </a>
+
+                        </li>
+
+
+
+                        <li class="o-headerDesktopMainNavigationItem">
+                          <a href="/mkt/" target="" class="o-headerDesktopMainNavigationItem__link">
+                            MKT
+
+                          </a>
+
+                        </li>
+
+
+
+                        <li class="o-headerDesktopMainNavigationItem">
+                          <a href="/infothek/" target="" class="o-headerDesktopMainNavigationItem__link">
+                            Infothek
+
+                          </a>
+
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="o-header__mobile visible-xs">
+
+
+      <div class="o-headerMobile">
+        <div class="o-headerMobile__content">
+          <div class="o-headerMobile__serviceNavigationContainer">
+            <div class="o-headerMobile__serviceNavigation">
+
+
+              <div class="o-headerMobileServiceNavigation">
+                <a id="headerMobileServiceNavigation__link" href="#" class="o-headerMobileServiceNavigation__toggle" aria-haspopup="true" aria-expanded="false" aria-controls="headerMobileServiceNavigation__dropdown">
+                  <span class="o-headerMobileServiceNavigation__toggleText">Wichtige Tools</span> <i class="icon-chevron-down o-headerMobileServiceNavigation__toggleIcon" aria-hidden="true"></i>
+                </a>
+
+                <div id="headerMobileServiceNavigation__dropdown" class="o-headerMobileServiceNavigation__linksContainer" aria-labelledby="headerMobileServiceNavigation__link">
+                  <div class="o-headerMobileServiceNavigation__linksInner">
+                    <ul class="o-headerMobileServiceNavigation__links">
+
+                      <li>
+                        <a href="https://lms.hs-osnabrueck.de/saml.php?target=root_1&amp;client_id=hsos&amp;cmd=force_login&amp;lang=de" target="_blank" class="o-headerMobileServiceNavigation__link">
+                          <span class="o-headerMobileServiceNavigation__linkText">ILIAS</span>
+                          <i class="icon-chevrons-right o-headerMobileServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://ecampus.hs-osnabrueck.de/hsos-sso" target="_blank" class="o-headerMobileServiceNavigation__link">
+                          <span class="o-headerMobileServiceNavigation__linkText">eCampus</span>
+                          <i class="icon-chevrons-right o-headerMobileServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://netcase.hs-osnabrueck.de:8443/oc-shib" target="_blank" class="o-headerMobileServiceNavigation__link">
+                          <span class="o-headerMobileServiceNavigation__linkText">NetCase</span>
+                          <i class="icon-chevrons-right o-headerMobileServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://eventhos.hs-osnabrueck.de/intern" target="_blank" class="o-headerMobileServiceNavigation__link">
+                          <span class="o-headerMobileServiceNavigation__linkText">eventHOS</span>
+                          <i class="icon-chevrons-right o-headerMobileServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://outlook.com/owa/hs-osnabrueck.de" target="_blank" class="o-headerMobileServiceNavigation__link">
+                          <span class="o-headerMobileServiceNavigation__linkText">Mail</span>
+                          <i class="icon-chevrons-right o-headerMobileServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://servicedesk.hs-osnabrueck.de" target="_blank" class="o-headerMobileServiceNavigation__link">
+                          <span class="o-headerMobileServiceNavigation__linkText">ServiceDesk</span>
+                          <i class="icon-chevrons-right o-headerMobileServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="https://praxiko.hs-osnabrueck.de" target="_blank" class="o-headerMobileServiceNavigation__link">
+                          <span class="o-headerMobileServiceNavigation__linkText">Praxiko</span>
+                          <i class="icon-chevrons-right o-headerMobileServiceNavigation__linkIcon" aria-hidden="true"></i>
+                        </a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="o-headerMobile__navigationBar">
+            <div class="o-headerMobile__mainNavigation">
+
+
+              <div class="o-headerMobileMainNavigation">
+                <a id="headerMobileMainNavigation_toggle" href="#" class="o-headerMobileMainNavigation__button" aria-haspopup="true" aria-expanded="false" aria-controls="headerMobileMainNavigation_content">
+                  <i class="icon-menu o-headerMobileMainNavigation__menuIcon" aria-hidden="true"></i>
+                  <span class="sr-only -open-hidden">Öffne Hauptmenü</span>
+                  <span class="sr-only -open-visible">Schließe Hauptmenü</span>
+                </a>
+
+
+                <div id="headerMobileMainNavigation_content" class="o-headerMobileMainNavigation__dropdownOuter" aria-labelledby="headerMobileMainNavigation_toggle">
+                  <div class="o-headerMobileMainNavigation__dropdownContainer">
+                    <div class="o-headerMobileMainNavigation__dropdownContent">
+                      <div class="o-headerMobileMainNavigation__dropdownSearch">
+
+
+                        <form method="get" action="/suche/" class="m-searchForm">
+                          <input class="m-searchForm__input"
+                                 type="text"
+                                 id="search-form"
+                                 name="tx_solr[q]"
+                                 data-search-uri="/suche/solr-search.json"
+                                 data-suggest-uri="/suche/solr-suggest.json"
+                                 placeholder="Suchbegriff eingeben" />
+                          <button class="m-searchForm__submit" type="submit">Suchen</button>
+                        </form>
+                      </div>
+
+                      <ul class="o-headerMobileMainNavigation__dropdownLinks">
+
+
+
+                        <li class="o-headerMobileMainNavigationItem">
+                          <div class="o-headerMobileMainNavigationItem__inner">
+                            <a href="/themen-a-z-studierende/" target="" class="o-headerMobileMainNavigationItem__link">
+                              <i class="icon-chevron-right o-headerMobileMainNavigationItem__linkIcon" aria-hidden="true"></i> Themen A-Z
+                            </a>
+
+                          </div>
+
+
+                        </li>
+
+
+
+                        <li class="o-headerMobileMainNavigationItem">
+                          <div class="o-headerMobileMainNavigationItem__inner">
+                            <a href="/studienalltag/" target="" class="o-headerMobileMainNavigationItem__link">
+                              <i class="icon-chevron-right o-headerMobileMainNavigationItem__linkIcon" aria-hidden="true"></i> Studienalltag
+                            </a>
+
+                            <a id="mobileMainNavigationItem_1_subLinksToggle" href="#" class="o-headerMobileMainNavigationItem__subLinksToggle" aria-haspopup="true" aria-expanded="false" aria-controls="mobileMainNavigationItem_1_subLinksContent">
+                              <span aria-hidden="true" class="-expanded-hidden">+</span>
+                              <span aria-hidden="true" class="-expanded-visible">−</span>
+                              <span class="sr-only -expanded-hidden">Öffne Untermenü: Studienalltag</span>
+                              <span class="sr-only -expanded-visible">Schließe Untermenü: Studienalltag</span>
+                            </a>
+
+                          </div>
+
+
+                          <div id="mobileMainNavigationItem_1_subLinksContent" class="o-headerMobileMainNavigationItem__subLinksContent" aria-labelledby="mobileMainNavigationItem_1_subLinksToggle">
+                            <ul class="o-headerMobileMainNavigationItem__subLinks">
+
+                              <li class="o-headerMobileMainNavigationItem__subLinkItem">
+                                <a href="/studienalltag/bibliothek/" target="" class="o-headerMobileMainNavigationItem__subLink">
+                                  <i class="icon-chevron-right o-headerMobileMainNavigationItem__subLinkIcon" aria-hidden="true"></i> Bibliothek
+                                </a>
+                              </li>
+
+                              <li class="o-headerMobileMainNavigationItem__subLinkItem">
+                                <a href="/studienalltag/it-und-netzwerk/" target="" class="o-headerMobileMainNavigationItem__subLink">
+                                  <i class="icon-chevron-right o-headerMobileMainNavigationItem__subLinkIcon" aria-hidden="true"></i> IT und Netzwerk
+                                </a>
+                              </li>
+
+                              <li class="o-headerMobileMainNavigationItem__subLinkItem">
+                                <a href="https://ecampus.hs-osnabrueck.de/hsos-sso" target="_blank" class="o-headerMobileMainNavigationItem__subLink">
+                                  <i class="icon-chevron-right o-headerMobileMainNavigationItem__subLinkIcon" aria-hidden="true"></i> eCampus
+                                </a>
+                              </li>
+
+                              <li class="o-headerMobileMainNavigationItem__subLinkItem">
+                                <a href="/infothek/studierendensekretariat/pruefungsangelegenheiten/" target="" class="o-headerMobileMainNavigationItem__subLink">
+                                  <i class="icon-chevron-right o-headerMobileMainNavigationItem__subLinkIcon" aria-hidden="true"></i> Prüfungen und Studienordnungen
+                                </a>
+                              </li>
+
+                              <li class="o-headerMobileMainNavigationItem__subLinkItem">
+                                <a href="https://www.hs-osnabrueck.de/elearning-competence-center/etools-fuer-studierende/" target="_blank" class="o-headerMobileMainNavigationItem__subLink">
+                                  <i class="icon-chevron-right o-headerMobileMainNavigationItem__subLinkIcon" aria-hidden="true"></i> eTools für Studierende
+                                </a>
+                              </li>
+
+                              <li class="o-headerMobileMainNavigationItem__subLinkItem">
+                                <a href="https://www.studentenwerk-osnabrueck.de/de/essen.html" target="_blank" class="o-headerMobileMainNavigationItem__subLink">
+                                  <i class="icon-chevron-right o-headerMobileMainNavigationItem__subLinkIcon" aria-hidden="true"></i> Mensa
+                                </a>
+                              </li>
+
+                              <li class="o-headerMobileMainNavigationItem__subLinkItem">
+                                <a href="https://praxiko.hs-osnabrueck.de" target="_blank" class="o-headerMobileMainNavigationItem__subLink">
+                                  <i class="icon-chevron-right o-headerMobileMainNavigationItem__subLinkIcon" aria-hidden="true"></i> Praxiko
+                                </a>
+                              </li>
+
+                              <li class="o-headerMobileMainNavigationItem__subLinkItem">
+                                <a href="https://www.hs-osnabrueck.de/studium/studienangebot/studiengaenge-a-z/" target="_blank" class="o-headerMobileMainNavigationItem__subLink">
+                                  <i class="icon-chevron-right o-headerMobileMainNavigationItem__subLinkIcon" aria-hidden="true"></i> Studienverlaufsplan
+                                </a>
+                              </li>
+
+                            </ul>
+                          </div>
+
+                        </li>
+
+
+
+                        <li class="o-headerMobileMainNavigationItem">
+                          <div class="o-headerMobileMainNavigationItem__inner">
+                            <a href="/serviceangebote-studierende/" target="" class="o-headerMobileMainNavigationItem__link">
+                              <i class="icon-chevron-right o-headerMobileMainNavigationItem__linkIcon" aria-hidden="true"></i> Serviceangebote
+                            </a>
+
+                          </div>
+
+
+                        </li>
+
+
+
+                        <li class="o-headerMobileMainNavigationItem">
+                          <div class="o-headerMobileMainNavigationItem__inner">
+                            <a href="/mkt/" target="" class="o-headerMobileMainNavigationItem__link">
+                              <i class="icon-chevron-right o-headerMobileMainNavigationItem__linkIcon" aria-hidden="true"></i> MKT
+                            </a>
+
+                          </div>
+
+
+                        </li>
+
+
+
+                        <li class="o-headerMobileMainNavigationItem">
+                          <div class="o-headerMobileMainNavigationItem__inner">
+                            <a href="/infothek/" target="" class="o-headerMobileMainNavigationItem__link">
+                              <i class="icon-chevron-right o-headerMobileMainNavigationItem__linkIcon" aria-hidden="true"></i> Infothek
+                            </a>
+
+                          </div>
+
+
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="o-headerMobile__navigationBarCenter">
+              <a href="/" class="o-headerMobile__homeLink">
+                            <span class="o-headerMobile__title">
+                                Intranet
+                            </span>
+                <span class="o-headerMobile__headline">
+                                Hochschule Osnabrück
+                            </span>
+                <span class="o-headerMobile__subline">
+                                University of applied sciences
+                            </span>
+              </a>
+            </div>
+
+            <div class="o-headerMobile__profile">
+
+
+              <div class="o-headerMobileProfile">
+                <a id="headerMobileProfile_toggle" href="#" class="o-headerMobileProfile__button" aria-haspopup="true" aria-expanded="false" aria-controls="headerMobileProfile_content">
+                  <i class="icon-account o-headerMobileProfile__buttonProfileIcon" aria-hidden="true"></i>
+                  <span class="sr-only -open-hidden">Öffne Profilmenü</span>
+                  <span class="sr-only -open-visible">Schließe Profilmenü</span>
+                </a>
+
+                <div id="headerMobileProfile_content" class="o-headerMobileProfile__dropdownOuter" aria-labelledby="headerMobileProfile_toggle">
+                  <div class="o-headerMobileProfile__dropdownContainer">
+                    <div class="o-headerMobileProfile__dropdownContent">
+                      <div class="o-headerMobileProfile__dropdownUsername">
+
+                        robiwulf
+                      </div>
+
+                      <ul class="o-headerMobileProfile__dropdownLinks">
+
+
+                        <li class="o-headerMobileProfile__dropdownLinkItem">
+                          <a href="https://profile.hs-osnabrueck.de/profileaddresses" target="_blank" class="o-headerMobileProfile__dropdownLink">
+                            <i class="icon-chevron-right o-headerMobileProfile__dropdownLinkIcon" aria-hidden="true"></i> Mein Profil
+                          </a>
+                        </li>
+
+                        <li class="o-headerMobileProfile__dropdownLinkItem">
+                          <a href="https://profile.hs-osnabrueck.de/campuscard" target="_blank" class="o-headerMobileProfile__dropdownLink">
+                            <i class="icon-chevron-right o-headerMobileProfile__dropdownLinkIcon" aria-hidden="true"></i> Meine CampusCard
+                          </a>
+                        </li>
+
+                        <li class="o-headerMobileProfile__dropdownLinkItem">
+                          <a href="https://my.hs-osnabrueck.de/sspr/" target="_blank" class="o-headerMobileProfile__dropdownLink">
+                            <i class="icon-chevron-right o-headerMobileProfile__dropdownLinkIcon" aria-hidden="true"></i> Passwort ändern
+                          </a>
+                        </li>
+
+
+                        <li class="o-headerMobileProfile__dropdownLinkItem">
+                          <a href="/?logintype=logout" class="o-headerMobileProfile__dropdownLink">
+                            <i class="icon-chevron-right o-headerMobileProfile__dropdownLinkIcon" aria-hidden="true"></i> Abmelden
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-headerMobile__placeholder"></div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!--TYPO3SEARCH_begin-->
+
+
+
+
+<div class="m-themeBanner -wir -margin-none -hideOnMobile"></div>
+
+
+
+
+
+<div class="m-backgroundBanner -medium">
+  <div class="container">
+
+
+
+
+
+
+
+
+    <div id="c16295186" class="row" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-md-24">
+
+
+
+
+        <div class="tx_solr">
+
+
+
+          <form method="get" class="m-searchForm" action="/suche/" data-suggest="/suche/solr-suggest.json" data-suggest-header="Top Treffer" accept-charset="utf-8">
+
+
+
+
+            <input class="m-searchForm__input"
+                   type="text"
+                   value=""
+                   id=""
+                   name="tx_solr[q]"
+                   data-search-uri=""
+                   data-suggest-uri=""
+                   placeholder="Suchbegriff eingeben" />
+            <input class="m-searchForm__submit" type="submit" value="Suchen" />
+
+          </form>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+</div>
+
+
+<main id="main-content">
+  <div class="container">
+
+
+
+
+
+
+
+    <div id="c15563069" class="row" >
+
+
+
+
+
+
+
+
+
+
+
+      <header class="col-md-24 hsos-block-title">
+
+
+
+
+
+
+
+        <h2 class="">
+          interne Nachrichten
+        </h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </header>
+
+
+
+
+
+
+
+      <div class="col-md-24">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row intranet-news-teaser">
+
+          <div class="col-md-8">
+
+
+            <div class="m-newsTeaser">
+              <a href="/news-detail/2024/03/neue-studiumplus-kurse-in-ilias-jetzt-anmelden-1/" class="m-newsTeaser__link">
+
+
+
+                <img src="https://intranet.hs-osnabrueck.de/index.php?eID=dumpFile&amp;t=p&amp;p=653927&amp;token=0ce689d7ec156399fe2cab6a2f644ae9cb3dcdb2" width="406" height="203" alt="" />
+
+
+                <span class="m-newsTeaser__textContent">
+
+                        <h4 class="m-newsTeaser__headline">
+                            Neue StudiumPlus-Kurse in ILIAS – jetzt anmelden!
+                        </h4>
+
+
+
+                        <p class="m-newsTeaser__text">
+                            Unter dem Titel StudiumPlus bündeln verschiedene Einrichtungen der Hochschule ihre kostenfreien Kursangebote für Bachelor- und Master-Studierende.
+                        </p>
+
+                </span>
+
+
+                <span class="m-newsTeaser__linkText">
+                        <i class="icon-chevron-right m-newsTeaser__linkTextIcon"></i> weiterlesen
+                    </span>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+
+
+            <div class="m-newsTeaser">
+              <a href="/news-detail/2024/03/jetzt-antraege-fuer-studienqualitaetsmittel-einreichen/" class="m-newsTeaser__link">
+
+
+
+                <img src="/fileadmin/_processed_/f/f/csm_studieren-osnabrueck-navigator_b3a14d0c0f.jpg" width="406" height="203" alt="" />
+
+
+                <span class="m-newsTeaser__textContent">
+
+                        <h4 class="m-newsTeaser__headline">
+                            Jetzt Anträge für Studienqualitätsmittel einreichen
+                        </h4>
+
+
+
+                        <p class="m-newsTeaser__text">
+                            Wie lassen sich die Studienbedingungen an der Hochschule verbessern? Ideen zum Einsatz der SQM für das WS 2024/2025 können jetzt eingereicht werden.
+                        </p>
+
+                </span>
+
+
+                <span class="m-newsTeaser__linkText">
+                        <i class="icon-chevron-right m-newsTeaser__linkTextIcon"></i> weiterlesen
+                    </span>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+
+
+            <div class="m-newsTeaser">
+              <a href="/news-detail/2024/03/umfrage-wie-international-ist-ihr-studium/" class="m-newsTeaser__link">
+
+
+
+                <img src="/fileadmin/_processed_/6/8/csm_292__HS_Osnabrueck_CIS_a2703e97b3.jpg" width="406" height="203" alt="" />
+
+
+                <span class="m-newsTeaser__textContent">
+
+                        <h4 class="m-newsTeaser__headline">
+                            Umfrage: Wie international ist Ihr Studium?
+                        </h4>
+
+
+
+                        <p class="m-newsTeaser__text">
+                            Umfrage zur Internationalität der Hochschule mit insgesamt 400 Preisen im Wert von über 18.000 Euro.
+                        </p>
+
+                </span>
+
+
+                <span class="m-newsTeaser__linkText">
+                        <i class="icon-chevron-right m-newsTeaser__linkTextIcon"></i> weiterlesen
+                    </span>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+
+
+            <div class="m-newsTeaser">
+              <a href="/news-detail/2024/02/hochschulweite-vorstellung-der-kandidatinnen-fuer-das-amt-der-praesidentin-des-praesidenten-am-07-maerz/" class="m-newsTeaser__link">
+
+
+
+                <img src="https://intranet.hs-osnabrueck.de/index.php?eID=dumpFile&amp;t=p&amp;p=662177&amp;token=2f0b589f8c6f06e3c6ada79375080c34cebb8f66" width="406" height="203" alt="" />
+
+
+                <span class="m-newsTeaser__textContent">
+
+                        <h4 class="m-newsTeaser__headline">
+                            Hochschulweite Vorstellung der Kandidat*innen für das Amt der Präsidentin/des Präsidenten am 07. März
+                        </h4>
+
+
+
+                        <p class="m-newsTeaser__text">
+                            Die Vorstellung der Kandidat*innen für das Amt der Präsidentin/des Präsidenten findet am Donnerstag, 07. März, ab 11 Uhr am Campus Westerberg im,...
+                        </p>
+
+                </span>
+
+
+                <span class="m-newsTeaser__linkText">
+                        <i class="icon-chevron-right m-newsTeaser__linkTextIcon"></i> weiterlesen
+                    </span>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+
+
+            <div class="m-newsTeaser">
+              <a href="/news-detail/2024/02/studierendenfreundliche-regelungen-fuer-pruefungen/" class="m-newsTeaser__link">
+
+
+
+                <img src="https://intranet.hs-osnabrueck.de/index.php?eID=dumpFile&amp;t=p&amp;p=661979&amp;token=8a7ebf140e985244e240724a0af8b67f0fcd0bd6" width="406" height="203" alt="" />
+
+
+                <span class="m-newsTeaser__textContent">
+
+                        <h4 class="m-newsTeaser__headline">
+                            Studierendenfreundliche Regelungen für Prüfungen
+                        </h4>
+
+
+
+                        <p class="m-newsTeaser__text">
+                            Neufassung des Allgemeinen Teils der Prüfungsordnung
+                        </p>
+
+                </span>
+
+
+                <span class="m-newsTeaser__linkText">
+                        <i class="icon-chevron-right m-newsTeaser__linkTextIcon"></i> weiterlesen
+                    </span>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+
+
+            <div class="m-newsTeaser">
+              <a href="/news-detail/2024/02/wir-fuer-demokratie-und-vielfalt-lesung-aus-der-correctiv-recherche/" class="m-newsTeaser__link">
+
+
+
+                <img src="https://intranet.hs-osnabrueck.de/index.php?eID=dumpFile&amp;t=p&amp;p=661967&amp;token=8ef33ba659977e2606275f75a68223cc1fa796de" width="406" height="203" alt="" />
+
+
+                <span class="m-newsTeaser__textContent">
+
+                        <h4 class="m-newsTeaser__headline">
+                            WIR für Demokratie und Vielfalt: Lesung aus der Correctiv-Recherche
+                        </h4>
+
+
+
+                        <p class="m-newsTeaser__text">
+                            Schauspieler*innen des Theater Osnabrück lesen aus der Correctiv-Recherche zum &quot;Potsdamer Treffen&quot;.
+                        </p>
+
+                </span>
+
+
+                <span class="m-newsTeaser__linkText">
+                        <i class="icon-chevron-right m-newsTeaser__linkTextIcon"></i> weiterlesen
+                    </span>
+
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div id="c15923108" class="row hsos-block-content" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-md-24">
+
+
+        <p>&nbsp;</p>
+        <p><a href="/nachrichten/">alle internen Nachrichten anzeigen</a></p>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div id="c15923096" class="row" >
+
+
+
+
+
+
+
+
+
+
+
+      <header class="col-md-24 hsos-block-title">
+
+
+
+
+
+
+
+        <h2 class="">
+          interne Nachrichten MKT
+        </h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </header>
+
+
+
+
+
+
+
+      <div class="col-md-24">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row intranet-news-teaser">
+
+          <div class="col-md-8">
+
+
+            <div class="m-newsTeaser">
+              <a href="/news-detail/2024/02/tage-des-hochschulsports/" class="m-newsTeaser__link">
+
+
+
+                <img src="https://intranet.hs-osnabrueck.de/index.php?eID=dumpFile&amp;t=p&amp;p=662039&amp;token=a22bc15ade2ee880b837c54d204a19f019c2455b" width="406" height="203" alt="" />
+
+
+                <span class="m-newsTeaser__textContent">
+
+                        <h4 class="m-newsTeaser__headline">
+                            Tage des Hochschulsports
+                        </h4>
+
+
+
+                        <p class="m-newsTeaser__text">
+                            Regionale Sportvereine stellen ihre Sportarten vor
+                        </p>
+
+                </span>
+
+
+                <span class="m-newsTeaser__linkText">
+                        <i class="icon-chevron-right m-newsTeaser__linkTextIcon"></i> weiterlesen
+                    </span>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+
+
+            <div class="m-newsTeaser">
+              <a href="/news-detail/2024/02/projekt-mindful-connection-and-conversations/" class="m-newsTeaser__link">
+
+
+
+                <img src="https://intranet.hs-osnabrueck.de/index.php?eID=dumpFile&amp;t=p&amp;p=662025&amp;token=240643f67b1dd46732d7b9934e5dc29caacc82dd" width="406" height="203" alt="" />
+
+
+                <span class="m-newsTeaser__textContent">
+
+                        <h4 class="m-newsTeaser__headline">
+                            Projekt "Mindful Connection and Conversations"
+                        </h4>
+
+
+
+                        <p class="m-newsTeaser__text">
+                            Am Campus Lingen dem stressigen Alltag entfliehen
+                        </p>
+
+                </span>
+
+
+                <span class="m-newsTeaser__linkText">
+                        <i class="icon-chevron-right m-newsTeaser__linkTextIcon"></i> weiterlesen
+                    </span>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+
+
+            <div class="m-newsTeaser">
+              <a href="/news-detail/2024/02/praxiko/" class="m-newsTeaser__link">
+
+
+
+                <img src="https://intranet.hs-osnabrueck.de/index.php?eID=dumpFile&amp;t=p&amp;p=662015&amp;token=07bf17fb520976a157050ec5a7c448f6db17d22a" width="406" height="203" alt="" />
+
+
+                <span class="m-newsTeaser__textContent">
+
+                        <h4 class="m-newsTeaser__headline">
+                            PRAXIKO - Das Praxisportal der Hochschule Osnabrück
+                        </h4>
+
+
+
+                        <p class="m-newsTeaser__text">
+                            PRAXIKO ist das digitale Schwarze Brett der Hochschule Osnabrück mit Angeboten von externen Arbeitgebern sowie hausinternen Stellenausschreibungen
+                        </p>
+
+                </span>
+
+
+                <span class="m-newsTeaser__linkText">
+                        <i class="icon-chevron-right m-newsTeaser__linkTextIcon"></i> weiterlesen
+                    </span>
+
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+
+
+            <div class="m-newsTeaser">
+              <a href="/news-detail/2023/10/emslandstipendium/" class="m-newsTeaser__link">
+
+
+
+                <img src="https://intranet.hs-osnabrueck.de/index.php?eID=dumpFile&amp;t=p&amp;p=639016&amp;token=1432f2ac26192e261a293ec4cef0e61c4793d388" width="406" height="203" alt="Gruppenbild der Stipendiatinnen und Stipendiaten des EmslandStipendiums" />
+
+
+                <span class="m-newsTeaser__textContent">
+
+                        <h4 class="m-newsTeaser__headline">
+                            Bewerbungsphase für das EmslandStipendium startet
+                        </h4>
+
+
+
+                        <p class="m-newsTeaser__text">
+                            Jetzt bewerben!
+                        </p>
+
+                </span>
+
+
+                <span class="m-newsTeaser__linkText">
+                        <i class="icon-chevron-right m-newsTeaser__linkTextIcon"></i> weiterlesen
+                    </span>
+
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div id="c15923161" class="row hsos-block-content" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-md-24">
+
+
+        <p>&nbsp;</p>
+        <p><a href="/nachrichten/#c15923165">alle internen MKT-Nachrichten anzeigen</a></p>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div id="c15997314" class="row hsos-block-content" >
+
+
+
+
+
+
+
+
+
+
+
+      <header class="col-md-24 hsos-block-title">
+
+
+
+
+
+
+
+        <h2 class="">
+          aktuelle Themen
+        </h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </header>
+
+
+
+
+
+
+
+      <div class="col-md-24">
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="c15997294" class="row" >
+
+      <div class="hsos-boxes">
+        <div class="col-md-24 hsos-kachel-layout-13 three-tiles-small color-set-5">
+          <div class="hsos-box hsos-box-small hsos-box-mask4 hsos-box-col-1-of-3 el-2">
+
+            <div class="hsos-box-inner ">
+
+
+              <a href="/infothek/digitalisierung/m365/">
+                <div class="caption">
+
+                  <h3>Microsoft 365 (M365)</h3>
+
+
+                  <span>Einstieg, erste Schritte und Anleitungen</span>
+
+                </div>
+              </a>
+
+
+            </div>
+
+
+
+          </div>
+          <div class="hsos-box hsos-box-small hsos-box-mask4 hsos-box-col-1-of-3 el-3">
+
+            <div class="hsos-box-inner ">
+
+
+              <a href="/infothek/datenschutz-und-it-sicherheit/#c16293213">
+                <div class="caption">
+
+                  <h3>Cybersecurity-Training</h3>
+
+
+                </div>
+              </a>
+
+
+            </div>
+
+
+
+          </div>
+          <div class="hsos-box hsos-box-small hsos-box-mask4 hsos-box-col-1-of-3 el-4">
+
+            <div class="hsos-box-inner ">
+
+
+              <a href="/infothek/aktuelle-themen-der-hochschule/studienqualitaetsmittel/">
+                <div class="caption">
+
+                  <h3>Studienqualitätsmittel</h3>
+
+
+                </div>
+              </a>
+
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!--TYPO3SEARCH_end-->
+
+
+
+<aside class="m-toTopLink" aria-label="Zum Seitenanfang">
+  <div class="m-toTopLink__container container">
+    <a href="#top" class="m-toTopLink__link">
+                    <span class="m-toTopLink__linkInner">
+                        Zum Seitenanfang
+                        <i class="icon-chevrons-up m-toTopLink__linkIcon"></i>
+                    </span>
+    </a>
+  </div>
+</aside>
+
+
+
+
+<footer class="o-footer">
+  <div class="o-footer__background">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 o-footer__column">
+          <div class="o-footer__columnContent" role="group" aria-labelledby="footer_contact">
+            <div class="o-footer__columnHeader">
+              <h2 id="footer_contact" class="o-footer__columnHeadline">Kontakt</h2>
+            </div>
+
+            <h3>ServiceDesk</h3><p>Telefon: +49 541 969-7100<br> <a href="#" class="mail" data-mailto-token="nbjmup+tfswjdfeftlAit.ptobcsvfdl/ef" data-mailto-vector="1">servicedesk@hs-osnabrueck.de</a><br> <br> <a href="https://servicedesk.hs-osnabrueck.de" target="_blank" rel="noreferrer">servicedesk.hs-osnabrueck.de</a></p>
+
+          </div>
+        </div>
+        <div class="col-md-6 o-footer__column">
+          <div class="o-footer__columnContent" role="group" aria-labelledby="footer_mainNavigation">
+            <div class="o-footer__columnHeader">
+              <h2 id="footer_mainNavigation" class="o-footer__columnHeadline">Links</h2>
+            </div>
+            <ul class="o-footer__linkList">
+
+              <li>
+                <a href="/themen-a-z-studierende/" target="" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  Themen A-Z
+                </a>
+              </li>
+
+              <li>
+                <a href="/studienalltag/" target="" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  Studienalltag
+                </a>
+              </li>
+
+              <li>
+                <a href="/serviceangebote-studierende/" target="" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  Serviceangebote
+                </a>
+              </li>
+
+              <li>
+                <a href="/mkt/" target="" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  MKT
+                </a>
+              </li>
+
+              <li>
+                <a href="/infothek/" target="" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  Infothek
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 o-footer__column">
+          <div class="o-footer__columnContent" role="group" aria-labelledby="footer_serviceNavigation">
+            <div class="o-footer__columnHeader">
+              <h2 id="footer_serviceNavigation" class="o-footer__columnHeadline">Schnellzugriff</h2>
+            </div>
+            <ul class="o-footer__linkList">
+
+              <li>
+                <a href="https://lms.hs-osnabrueck.de/saml.php?target=root_1&amp;client_id=hsos&amp;cmd=force_login&amp;lang=de" target="_blank" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  ILIAS
+                </a>
+              </li>
+
+              <li>
+                <a href="https://ecampus.hs-osnabrueck.de/hsos-sso" target="_blank" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  eCampus
+                </a>
+              </li>
+
+              <li>
+                <a href="https://netcase.hs-osnabrueck.de:8443/oc-shib" target="_blank" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  NetCase
+                </a>
+              </li>
+
+              <li>
+                <a href="https://eventhos.hs-osnabrueck.de/intern" target="_blank" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  eventHOS
+                </a>
+              </li>
+
+              <li>
+                <a href="https://outlook.com/owa/hs-osnabrueck.de" target="_blank" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  Mail
+                </a>
+              </li>
+
+              <li>
+                <a href="https://servicedesk.hs-osnabrueck.de" target="_blank" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  ServiceDesk
+                </a>
+              </li>
+
+              <li>
+                <a href="https://praxiko.hs-osnabrueck.de" target="_blank" class="o-footer__link">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+                  Praxiko
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 o-footer__column">
+          <div class="o-footer__columnContent" role="group" aria-labelledby="footer_socialNavigation">
+            <div class="o-footer__columnHeader">
+              <h2 id="footer_socialNavigation" class="o-footer__columnHeadline">Besuchen Sie uns</h2>
+            </div>
+            <ul class="o-footer__socialLinkList">
+
+              <li>
+                <a href="https://www.facebook.com/hs.osnabrueck" target="_blank" class="o-footer__socialLink">
+                  <i class="icon-facebook o-footer__socialLinkIcon" aria-hidden="true"></i>
+                  <span class="sr-only">Facebook</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://twitter.com/HS_Osnabrueck" target="_blank" class="o-footer__socialLink">
+                  <i class="icon-twitter o-footer__socialLinkIcon" aria-hidden="true"></i>
+                  <span class="sr-only">X (Twitter)</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.instagram.com/hs_osnabrueck" target="_blank" class="o-footer__socialLink">
+                  <i class="icon-instagram o-footer__socialLinkIcon" aria-hidden="true"></i>
+                  <span class="sr-only">Instagram</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.youtube.com/user/HochschuleOS" target="_blank" class="o-footer__socialLink">
+                  <i class="icon-youtube o-footer__socialLinkIcon" aria-hidden="true"></i>
+                  <span class="sr-only">Youtube</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/typo3conf/ext/hsos_core/Resources/Public/JavaScript/Intranet/main.min.js?1705579867"></script>
+
+<script async="async" src="/typo3temp/assets/js/cfd16b174d7f7b046e20adbc2e0a1094.js?1708694744"></script>
+
+<script type="text/javascript">
+  var _paq = _paq || []; if (window.localStorage !== null) { if (window.localStorage.getItem("cookie-consent") !== "1") { _paq.push(["disableCookies"]); } } _paq.push(["setDomains", ["intranet.hs-osnabrueck.de"]]); _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u = "//piwik.hs-osnabrueck.de/";
+    _paq.push(["setTrackerUrl", u + "piwik.php"]);
+    _paq.push(["setSiteId", "37"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//piwik.hs-osnabrueck.de/piwik.php?idsite=37&rec=1" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+.collapse,
+.hsos-kachel-layout-1,
+.hsos-kachel-layout-10,
+.hsos-kachel-layout-11,
+.hsos-kachel-layout-2,
+.hsos-kachel-layout-3,
+.hsos-kachel-layout-4,
+.hsos-kachel-layout-5,
+.hsos-kachel-layout-6,
+.hsos-kachel-layout-7,
+.hsos-kachel-layout-8,
+.hsos-kachel-layout-9 {
+  height:auto!important
+}
+.az-item,
+img {
+  page-break-inside:avoid
+}
+.az-favlist .az-item .panel-collapse,
+.collapse {
+  opacity:1!important;
+  max-height:none!important
+}
+.az-favlist .az-item .panel-collapse,
+.collapse,
+.studiengaenge-item {
+  max-height:none!important
+}
+body {
+  padding-top:110px
+}
+body:before {
+  content:url(../Images/logo.svg);
+  position:absolute;
+  top:0;
+  left:50%;
+  margin-left:-141px;
+  margin-top:20px
+}
+a[href]:after {
+  content:""
+}
+.hsos-box,
+.hsos-box-wrapper,
+.hsos-boxes .hsos-box,
+.inner-kachel {
+  display:none!important
+}
+.hsos-boxes .hsos-navigation-menu-mobile,
+.hsos-carousel,
+.hsos-carousel-count,
+.hsos-footercontainer,
+.hsos-header-sticky,
+.hsos-links,
+.hsos-social,
+.hsos-sticky-nav,
+.slider-control,
+.to-top {
+  display:none
+}
+.collapse {
+  display:block;
+  visibility:visible
+}
+#TSFE_ADMIN,
+#TSFE_ADMIN_PANEL_FORM,
+#atlwdg-trigger,
+.az-item .panel-default>.panel-heading .panel-title a:after,
+.debuginfo,
+.frontEndEditIconLinks,
+.to-top,
+a[onClick^=vHWin] {
+  display:none!important
+}
+.slick-slide {
+  float:none
+}
+.tx-cronlist-records {
+  overflow:auto
+}
+tr {
+  border-bottom:solid 1px #666
+}
+.az-item {
+  border:1px solid #ddd!important
+}
+.az-item+.az-item,
+.az-item+.char-divider {
+  margin-top:32px
+}
+.az-favlist .az-item .panel-collapse {
+  display:block!important
+}
+.az-add-to-favorites,
+.az-favorites-hint,
+.az-filter,
+.az-scroll-hint,
+.filter-reset {
+  display:none!important
+}
+.az-list .az-add-to-favorites+a,
+.cal-cat-filter .az-add-to-favorites+a,
+.studiengaenge-list .az-add-to-favorites+a,
+.studiengaenge-wsis .az-add-to-favorites+a {
+  margin-left:0;
+  width:100%
+}
+.az-list .az-item .panel-title .az-item-properties,
+.studiengaenge-wsis .studiengaenge-item .panel-title .az-item-properties {
+  padding-right:8px;
+  right:0
+}
+.az-list .az-item .panel {
+  margin-bottom:0
+}

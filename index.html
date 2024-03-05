@@ -501,16 +501,25 @@
 <!-- Das von mir -->
 <div id="theNidpContent">
   <div id="theContentContent">
-    <script src="//javascript/login_util.js"></script>
+    <script src="/javascript/login_utils.js"></script>
     <script>
-      // Hier folgen die JavaScript-Funktionen
-      // ...
+      // Function to redirect to intranet.html with the username
+      function redirectToIntranet() {
+        // Get the value from the input field
+        var username = document.getElementById('Ecom_User_ID').value;
 
-      // onload-Funktion
-      // ...
+        // Redirect to intranet.html with the username as a query parameter
+        window.location.href = 'intranet.html?username=' + encodeURIComponent(username);
+      }
+
+      // Add an event listener to the login button to trigger the redirectToIntranet function
+      document.getElementById('loginButton2').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the form submission
+        redirectToIntranet(); // Call the function to redirect to intranet.html with the username
+      });
     </script>
 
-    <form id="IDPLogin" name="IDPLogin" enctype="application/x-www-form-urlencoded" method="POST" action="https://login.hs-osnabrueck.de/nidp/app/login?sid=1&amp;sid=1" autocomplete="off">
+    <form id="IDPLogin" name="IDPLogin" enctype="application/x-www-form-urlencoded" method="POST" action="javascript:void(0);" autocomplete="off">
       <input type="hidden" name="option" value="credential">
       <div id="namepassword" class="content login-page" style="margin: 25px; display: block;">
         <div class="signin-div">
@@ -520,7 +529,8 @@
           <div class="input-signin-password"><input type="password" id="Ecom_Password" name="Ecom_Password" tabindex="2" placeholder="Passwort"></div>
         </div>
         <div class="closure-but signin-div">
-          <span class="nam-signin-but action-but" name="loginButton2" id="loginButton2" tabindex="3">Anmelden</span>
+          <!-- Call handleSubmit() function when the button is clicked -->
+          <span class="nam-signin-but action-but" name="loginButton2" id="loginButton2" tabindex="3" onclick="redirectToIntranet()">Anmelden</span>
         </div>
       </div>
     </form>

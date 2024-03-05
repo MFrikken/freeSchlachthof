@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="/css/intranet.min.css" media="all">
   <link rel="stylesheet" href="/css/print.min.css" media="print">
   <link href="/css/news-basic.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA/CAMAAABnwz74AAAAMFBMVEX////Gx8gAnuDq6urP0NHd3t/w9PX5+/wxseZsx+3c8fqS1fJSveoXp+O04/bH6vjfSHUMAAABRUlEQVR42u2S0ZLDIAhFm6CIYPT//3arm5HtWrYdOrNPuc85JxfwduXKlXeSmD/CWyb5gG/l2Pfs7i609/gEWHPHvQKU3t0t4Ewd9wkS19IpW0AknOyrieKWYN8pV3yKj8W9FtxzFFkVurhXgqEg4YfFidJvCUaNNstjy2Twh1gCyjWdg0CIwE9G0H2tApKGd+4UbFsIwC3/wufFFkGpjDFs2xT0hIgsdEy6tE6vgoMyJwiDUcGpAK59kv7RwNeUIt8/fyYYk2AVKvZrY4aJL4I5Cd6snN1NwTCASWPcNKZgMwQIijsa6OJcAl2cY4SEujhDgMFooN2NwNxuMAVg0iFCmjV/3ncRGDimZc9mg5W2TmUIlp/bLzWGV4IIBj6Phn8JdPJ3Aw/dO+0R6NVcAr2aWxCg406BXs0XVNyXdLty5cq/5AtRdQy34ibWawAAAABJRU5ErkJggg==">
 
 
   <script src="/javascript/intranet/head.min.js"></script>
@@ -31,10 +33,11 @@
   <script type="text/javascript">
     var fontUrl = "/images/assets/fonts/icomoon.ttf"; // Update this with the correct path to your icomoon.ttf file
 
-    var isFontSupported = (function() {
+    var isFontSupported = (function () {
       if (!window.FontFace) return false;
       var font = new FontFace('t', 'url(' + fontUrl + ')', {});
-      return font.load().catch(function() {}) && (font.status === 'loading' || font.status === 'loaded');
+      return font.load().catch(function () {
+      }) && (font.status === 'loading' || font.status === 'loaded');
     })(this);
 
     var fontCssUrl = "/css/intranet.min.css"; // Update this with the correct path to your font CSS file
@@ -48,7 +51,7 @@
     function loadFontCss() {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', fontCssUrl, true);
-      xhr.onreadystatechange = function() {
+      xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             applyFontCss(xhr.responseText);
@@ -368,10 +371,31 @@
                               <a href="#" class="o-headerDesktopMainNavigationProfile__button" aria-controls="">
 
                                 <i class="icon-account o-headerDesktopMainNavigationProfile__buttonProfileIcon"
-                                   aria-hidden="true"></i> robiwulf <i
+                                   aria-hidden="true"></i> <span id="usernamePlaceholder"></span><i
                                 class="icon-chevron-down o-headerDesktopMainNavigationProfile__buttonArrowIcon"
                                 aria-hidden="true"></i>
                               </a>
+
+                              <script>
+                                // Function to get the value of a query parameter from the URL
+                                function getQueryParam(name) {
+                                  name = name.replace(/[\[\]]/g, '\\$&');
+                                  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                                    results = regex.exec(window.location.href);
+                                  if (!results) return null;
+                                  if (!results[2]) return '';
+                                  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                                }
+
+                                // Get the username query parameter from the URL
+                                var username = getQueryParam('username');
+
+                                // Set the username as the content of the usernamePlaceholder element
+                                var usernamePlaceholder = document.getElementById('usernamePlaceholder');
+                                if (usernamePlaceholder) {
+                                  usernamePlaceholder.textContent = username;
+                                }
+                              </script>
 
                               <div class="o-headerDesktopMainNavigationProfile__dropdownContainer">
                                 <div class="o-headerDesktopMainNavigationProfile__dropdownContent">

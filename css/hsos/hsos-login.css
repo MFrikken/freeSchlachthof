@@ -1,0 +1,108 @@
+body {
+  font-size: 19px;
+  font-weight: 300;
+  background-color: white;
+}
+
+#hsos-header {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+#hsos-header img {
+  height: 115px;
+}
+
+#hsos-footer {
+  margin: 2em;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+#hsos_impressum,
+#hsos_helpdesk {
+  color: #333;
+}
+
+#hsos_impressum a,
+#hsos_helpdesk a {
+  color: #1c9ada;
+  text-decoration: none;
+}
+
+#globalMessage {
+  padding: 0 !important;
+  text-align: center;
+  min-height: 23px;
+  font-size: 14px;
+  color: #333;
+}
+
+#masthead-namclient {
+  display: none;
+}
+
+.tabs {
+  display: none;
+}
+
+#currentCardDisplay {
+  display: none !important;
+}
+
+#theNidpContent {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.signin-div {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#namepassword:nth-child {
+  margin-top: 0.4em;
+}
+
+#namepassword input,
+#namepassword input:focus {
+  background-color: #f7f7f7;
+  color: #333;
+  border: none;
+  border-radius: 0px;
+  padding: 0.8em !important;
+  outline: none;
+  font-size: 19px !important;
+  font-weight: 300 !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+#loginButton2 {
+  background-color: #06abf7;
+  color: white;
+  border: 0;
+  border-radius: 0px;
+  margin-top: 1em;
+  padding: 0.8em 0 !important;
+  width: 100%;
+  font-size: 19px !important;
+}
+
+a:link {
+  color: #06abf7;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #06abf7 !important;
+  /* opacity: 0.7; */
+  text-decoration: none !important;
+  background-color: transparent !important;
+}
+
+a:visited {
+  color: #06abf7;
+  text-decoration: none !important;
+}

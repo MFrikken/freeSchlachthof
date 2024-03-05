@@ -1,0 +1,552 @@
+<!DOCTYPE HTML >
+<html lang="de">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=yes">
+
+  <!-- HSOS -->
+  <!--<title>Access Manager</title>-->
+  <title>Login | Hochschule Osnabr&uuml;ck</title>
+  <!-- HSOS -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- HSOS -->
+  <!-- Disabled duplicated inclusion of jquery -->
+  <script type="text/javascript" src="/javascript/jquery.min.js"></script>
+  <!-- HSOS -->
+  <link rel="stylesheet" href="/javascript/smart-app-banner.css">
+  <script src="/javascript/smart-app-banner.js"></script>
+
+  <link rel="shortcut icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA/CAMAAABnwz74AAAAMFBMVEX////Gx8gAnuDq6urP0NHd3t/w9PX5+/wxseZsx+3c8fqS1fJSveoXp+O04/bH6vjfSHUMAAABRUlEQVR42u2S0ZLDIAhFm6CIYPT//3arm5HtWrYdOrNPuc85JxfwduXKlXeSmD/CWyb5gG/l2Pfs7i609/gEWHPHvQKU3t0t4Ewd9wkS19IpW0AknOyrieKWYN8pV3yKj8W9FtxzFFkVurhXgqEg4YfFidJvCUaNNstjy2Twh1gCyjWdg0CIwE9G0H2tApKGd+4UbFsIwC3/wufFFkGpjDFs2xT0hIgsdEy6tE6vgoMyJwiDUcGpAK59kv7RwNeUIt8/fyYYk2AVKvZrY4aJL4I5Cd6snN1NwTCASWPcNKZgMwQIijsa6OJcAl2cY4SEujhDgMFooN2NwNxuMAVg0iFCmjV/3ncRGDimZc9mg5W2TmUIlp/bLzWGV4IIBj6Phn8JdPJ3Aw/dO+0R6NVcAr2aWxCg406BXs0XVNyXdLty5cq/5AtRdQy34ibWawAAAABJRU5ErkJggg==">
+  <link rel="stylesheet" href="/css/hsos/hsos-login.css">
+
+
+
+  <script>
+
+
+  </script>
+
+  <script>
+    banner = undefined;
+
+    function run(force) {
+      var n = document.querySelector('.smartbanner');
+      if (n) {
+        n.parentNode.removeChild(n);
+      }
+      new SmartBanner({
+        daysHidden: 0, // days to hide banner after close button is clicked (defaults to 15)
+        daysReminder: 0, // days to hide banner after "VIEW" button is clicked (defaults to 90)
+        appStoreLanguage: 'us', // language code for the App Store (defaults to user's browser language)
+        title: 'MobileAccess 2',
+        author: 'MicroFocus',
+        button: 'OPEN',
+        force: force
+      });
+    };
+  </script>
+
+  <link href="/css/ux_access.css" rel="stylesheet" type="text/css" media="screen"/>
+  <!-- HSOS -->
+  <!-- Added v1 to query string to invalidate old cached jquery file-->
+
+  <!-- HSOS -->
+
+
+  <style>
+    .masthead {
+      position: relative;
+      color: #ffffff;
+      background: #0088ce;
+      min-height: 40px;
+      max-height: 80px;
+      margin: 0;
+      vertical-align: middle;
+
+      background: -webkit-linear-gradient(left, #00a1de, #0088ce); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, #00a1de, #0088ce); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, #00a1de, #0088ce); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, #00a1de, #0088ce); /* Standard syntax */
+
+      background-color: #0088ce;
+    }
+
+    .mast-title {
+      vertical-align: middle;
+      margin-left: 15px;
+      color: #ffffff;
+      font-family: "Helvetica Neue Thin", "Helvetica Neue", Helvetica, Arial, san-serif;
+      font-size: 22px;
+      font-weight: 200;
+      letter-spacing: 1px;
+      display: inline;
+    }
+
+    .user-menu {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 13px;
+      color: #ffffff;
+    }
+
+    #nam-ham-menu {
+      top: 110px;
+    }
+
+    #nam-ham-but {
+      z-index: 610;
+    }
+
+    .glass-auth-menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: 610;
+    }
+
+    .glass-auth-user {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: 1999;
+    }
+
+    .mast-logo img {
+      max-height: 80px;
+      vertical-align: middle;
+    }
+
+  </style>
+
+
+
+
+  <script>
+
+
+    function updateQueryString(key, value, url) {
+      if (url) {
+        var re = new RegExp("([?&])" + key + "=.*?(&|#|$)(.*)", "gi"), hash;
+
+        if (re.test(url)) {
+          if (typeof value !== 'undefined' && value !== null)
+            return url.replace(re, '$1' + key + "=" + value + '$2$3');
+          else {
+            hash = url.split('#');
+            url = hash[0].replace(re, '$1$3').replace(/(&|\?)$/, '');
+            if (typeof hash[1] !== 'undefined' && hash[1] !== null)
+              url += '#' + hash[1];
+            return url;
+          }
+        } else {
+          if (typeof value !== 'undefined' && value !== null) {
+            var separator = url.indexOf('?') !== -1 ? '&' : '?';
+            hash = url.split('#');
+            url = hash[0] + separator + key + '=' + value;
+            if (typeof hash[1] !== 'undefined' && hash[1] !== null)
+              url += '#' + hash[1];
+            return url;
+          } else
+            return url;
+        }
+      }
+    }
+
+    function getToContent(strUrl, strTargetDivId) {
+      if ((null == strTargetDivId) || (null == strUrl)) {   // Required parameters missing. Return true to continue processing.
+        return true;
+      }
+      var elementTargetDiv = document.getElementById(strTargetDivId);
+      if (!elementTargetDiv) {   // Required element not resolvable. Return true to continue processing.
+        return true;
+      }
+      strUrl = updateQueryString("uiDestination", "contentDiv", strUrl);
+      $.ajaxSetup({xhrFields: {withCredentials: true}});
+      $.get(strUrl, function (data) {
+        $(elementTargetDiv).html(data);
+        return false;
+      })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+          if (jqXHR) {
+            if ((0 == jqXHR.readyState) && (0 == jqXHR.status)) {
+              setGlobalMessage("Im Webbrowser ist ein Fehler aufgetreten, der eine erfolgreiche Initiierung der Anforderung verhindert hat.");
+            }
+            if (4 == jqXHR.readyState) {
+              if (401 == jqXHR.status) {
+                setGlobalMessage("Der Zugriff auf die angeforderte Ressource wurde verweigert. (HTTP 401) (Wenn eine browserbasierte Authentifizierung abgebrochen wurde oder fehlerhaft war, wählen Sie eine neue Authentifizierungsmethode aus.)");
+              } else if (404 == jqXHR.status) {
+                setGlobalMessage("Die angefordertedds Ressource wurde vom Webserver nicht gefunden. (HTTP 404)");
+              } else if (500 == jqXHR.status) {
+                setGlobalMessage("Unerwarteter Fehler beim Webserver. (HTTP 500)");
+              } else if (503 == jqXHR.status) {
+                setGlobalMessage("Der Webserver ist zurzeit nicht verfügbar. (HTTP 503)");
+              } else if ((12156 == jqXHR.status) || (12157 == jqXHR.status)) {
+                setGlobalMessage("Der Webbrowser konnte keine sichere Verbindung zum Webserver erstellen. (HTTP 12157)");
+              } else {
+                var strErrorInstance = "Fehler bei der Webserveranforderung: (HTTP {0})".replace("{0}", jqXHR.status);
+                setGlobalMessage(strErrorInstance);
+              }
+            }
+          }
+        });
+      return true;
+    }
+
+    function postToContent(strUrl, strTargetDivId) {
+      if ((null == strTargetDivId) || (null == strUrl)) {   // Required parameters missing. Return true to continue processing.
+        return true;
+      }
+      var elementTargetDiv = document.getElementById(strTargetDivId);
+      if (!elementTargetDiv) {   // Required element not resolvable. Return true to continue processing.
+        return true;
+      }
+      strUrl = updateQueryString("uiDestination", "contentDiv", strUrl);
+      $.ajaxSetup({xhrFields: {withCredentials: true}});
+
+      $.post(strUrl, {}, function (data) {
+        $(elementTargetDiv).html(data);
+        return false;
+      })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+          if (jqXHR) {
+            if ((0 == jqXHR.readyState) && (0 == jqXHR.status)) {
+              setGlobalMessage("Im Webbrowser ist ein Fehler aufgetreten, der eine erfolgreiche Initiierung der Anforderung verhindert hat.");
+            }
+            if (4 == jqXHR.readyState) {
+              if (401 == jqXHR.status) {
+                setGlobalMessage("Der Zugriff auf die angeforderte Ressource wurde verweigert. (HTTP 401) (Wenn eine browserbasierte Authentifizierung abgebrochen wurde oder fehlerhaft war, wählen Sie eine neue Authentifizierungsmethode aus.)");
+              } else if (404 == jqXHR.status) {
+                setGlobalMessage("Die angeforderte Ressource wurde vom Webserver nicht gefunden. (HTTP 404)");
+              } else if (500 == jqXHR.status) {
+                setGlobalMessage("Unerwarteter Fehler beim Webserver. (HTTP 500)");
+              } else if (503 == jqXHR.status) {
+                setGlobalMessage("Der Webserver ist zurzeit nicht verfügbar. (HTTP 503)");
+              } else if ((12156 == jqXHR.status) || (12157 == jqXHR.status)) {
+                setGlobalMessage("Der Webbrowser konnte keine sichere Verbindung zum Webserver erstellen. (HTTP 12157)");
+              } else {
+                var strErrorInstance = "Fehler bei der Webserveranforderung: (HTTP {0})".replace("{0}", jqXHR.status);
+                setGlobalMessage(strErrorInstance);
+              }
+            }
+          }
+        });
+      return true;
+    }
+
+    function goToHelp() {
+      var helpButtonDiv = document.getElementById('helpButton');
+      if (helpButtonDiv) {
+        var strHelpUrl = helpButtonDiv.getAttribute("data-helpURL");
+        if (strHelpUrl) {
+          var w = window.open(strHelpUrl, "nidsPopupHelp", "toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=500");
+          if (w != null) {
+            w.focus();
+          }
+        }
+      }
+    }
+
+    function setHelpUrl(strHelpUrl) {
+      var helpButtonDiv = document.getElementById('helpButton');
+      if (helpButtonDiv) {
+        helpButtonDiv.setAttribute("data-helpURL", strHelpUrl);
+      }
+    }
+
+    function setFederationsHelp() {
+      setHelpUrl('/html/help/de/federations.html');
+    }
+
+    function setLogTicketHelp() {
+      setHelpUrl('/html/help/de/logTicketsubtab.html');
+    }
+
+    function isNumberKey(event) {
+      var charCode = (event.which) ? event.which : event.keyCode;
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+      }
+      return true;
+    }
+
+    function isEnterKey(event) {
+      return isKey(event, 13);
+    }
+
+    function isSpaceKey(event) {
+      return isKey(event, 32);
+    }
+
+    function isKey(event, targetKeyCode) {
+      var candidateKeyCode = (event.which) ? event.which : event.keyCode;
+      if (candidateKeyCode != targetKeyCode) {
+        return false;
+      }
+      return true;
+    }
+
+    function setGlobalMessage(strMessage) {
+      var globalMessage = document.getElementById('globalMessage');
+      if (globalMessage) {
+        globalMessage.innerHTML = strMessage;
+        return true;
+      }
+      return false;
+    }
+
+    $(document).ready(function () {
+      $("#nam-ham-but").click(function () {
+        $("#glass-div-auth-menu").show();
+        if ($("#nam-ham-menu").css('display') != 'block') {
+          $('#nam-ham-menu').toggle('slide');
+        }
+      });
+
+      $("#glass-div-auth-menu").click(function () {
+        $(this).hide();
+        if ($("#nam-ham-menu").css('display') == 'block') {
+          $("#nam-ham-menu").toggle('slide');
+        }
+      });
+
+      $("#username-namclient").click(function () {
+        $("#glass-div-auth-user").show();
+        if ($("#username-dialog-namclient").css('display') != 'block') {
+          $("#username-dialog-namclient").slideDown('fast');
+        }
+      });
+
+      $("#glass-div-auth-user").click(function () {
+        $(this).hide();
+        if ($("#username-dialog-namclient").css('display') == 'block') {
+          $("#username-dialog-namclient").slideUp('fast');
+        }
+      });
+
+    });
+  </script>
+
+
+
+  <style>
+
+    #globalMessage {
+      padding: 10px;
+      /* HSOS */
+      background-color: #fff;
+      /* HSOS */
+    }
+
+    #nam-login-tabs-div {
+      position: relative;
+      margin-left: 69px;
+      border-left: 1px solid rgb(218, 225, 225);
+      border-right: 0px !important;
+      text-align: left;
+    }
+
+    #multi-login-div {
+      border-bottom: 1px solid #dae1e1;
+    }
+
+    #username-dialog-namclient {
+      position: absolute;
+      top: 40px;
+      right: 20px;
+      color: #f6f6f6;
+      background: #434c50;
+      border-color: #434c50;
+    }
+
+  </style>
+</head>
+
+<body>
+<div id="hsos-header">
+  <a href="https://www.hs-osnabrueck.de" alt="Website">
+    <img src="/images/hsos-logo.png" alt="Logo">
+  </a>
+</div>
+
+<div id="runningInEndUserLoginEnvironment" style="display: none"></div>
+<div id="glass-div-auth-menu" class="glass-auth-menu">&nbsp;</div>
+<div id="glass-div-auth-user" class="glass-auth-user">&nbsp;</div>
+<div id="masthead-namclient" class="masthead">
+  <div id="branding-namclient">
+    <div class="mast-logo">
+      <img id="mastheadImage"
+           src="/images/pool/uaje.png">
+      <span class="mast-title" id="mastheadTitle">Login-Portal Hochschule Osnabrück</span>
+    </div>
+  </div>
+
+</div>
+
+
+<div id="nam-ham-menu" class="menu" style="display: none">
+
+
+  <div class="menu-separator">&nbsp;</div>
+  <div class="menu-label">Lokale Anmeldungen</div>
+
+  <div id="Kerberos" class="menu-option-mark">
+
+    <a
+      href="https://login.hs-osnabrueck.de/nidp/jsp/main.jsp?id=Kerberos&sid=1&target=https%3A//login.hs-osnabrueck.de/nidp/oauth/nam/authz?state%3Dfc12c0f2f3574663a7b4e551d895e459%26scope%3Dopenid%2Bemail%2Bprofile%2Bgroup%26response_type%3Dcode%26approval_prompt%3Dauto%26redirect_uri%3Dhttps%3A//intranet.hs-osnabrueck.de/%26client_id%3D8bc1fd38-d226-4c41-ab28-5ffd1926efec"
+      target="">
+      <img class="access-card" src="/images/pool/KTM.png">
+    </a>
+  </div>
+
+
+  <div id="Kerberos-IP" class="menu-option-mark">
+
+    <a
+      href="https://login.hs-osnabrueck.de/nidp/jsp/main.jsp?id=Kerberos-IP&sid=1&target=https%3A//login.hs-osnabrueck.de/nidp/oauth/nam/authz?state%3Dfc12c0f2f3574663a7b4e551d895e459%26scope%3Dopenid%2Bemail%2Bprofile%2Bgroup%26response_type%3Dcode%26approval_prompt%3Dauto%26redirect_uri%3Dhttps%3A//intranet.hs-osnabrueck.de/%26client_id%3D8bc1fd38-d226-4c41-ab28-5ffd1926efec"
+      target="">
+      <img class="access-card" src="/images/pool/KTM.png">
+    </a>
+  </div>
+
+
+  <div id="m365" class="menu-option-mark">
+
+    <a
+      href="https://login.hs-osnabrueck.de/nidp/jsp/main.jsp?id=m365&sid=1&target=https%3A//login.hs-osnabrueck.de/nidp/oauth/nam/authz?state%3Dfc12c0f2f3574663a7b4e551d895e459%26scope%3Dopenid%2Bemail%2Bprofile%2Bgroup%26response_type%3Dcode%26approval_prompt%3Dauto%26redirect_uri%3Dhttps%3A//intranet.hs-osnabrueck.de/%26client_id%3D8bc1fd38-d226-4c41-ab28-5ffd1926efec"
+      target="">
+      <img class="access-card"
+           src="/images/pool/JIzM.png">
+    </a>
+  </div>
+
+
+  <div id="AAF" class="menu-option-mark">
+
+    <a
+      href="https://login.hs-osnabrueck.de/nidp/jsp/main.jsp?id=AAF&sid=1&target=https%3A//login.hs-osnabrueck.de/nidp/oauth/nam/authz?state%3Dfc12c0f2f3574663a7b4e551d895e459%26scope%3Dopenid%2Bemail%2Bprofile%2Bgroup%26response_type%3Dcode%26approval_prompt%3Dauto%26redirect_uri%3Dhttps%3A//intranet.hs-osnabrueck.de/%26client_id%3D8bc1fd38-d226-4c41-ab28-5ffd1926efec"
+      target="">
+      <img class="access-card" src="/images/pool/DFc.png">2FA
+    </a>
+  </div>
+
+
+  <div id="400" class="menu-option-mark">
+
+    <a
+      href="https://login.hs-osnabrueck.de/nidp/jsp/main.jsp?id=400&sid=1&target=https%3A//login.hs-osnabrueck.de/nidp/oauth/nam/authz?state%3Dfc12c0f2f3574663a7b4e551d895e459%26scope%3Dopenid%2Bemail%2Bprofile%2Bgroup%26response_type%3Dcode%26approval_prompt%3Dauto%26redirect_uri%3Dhttps%3A//intranet.hs-osnabrueck.de/%26client_id%3D8bc1fd38-d226-4c41-ab28-5ffd1926efec"
+      target="">
+      <img class="access-card"
+           src="/images/pool/JmRmI.png">Name/Password
+      - Basic
+    </a>
+  </div>
+
+
+  <div id="402" class="menu-option-mark">
+
+    <a
+      href="https://login.hs-osnabrueck.de/nidp/jsp/main.jsp?id=402&sid=1&target=https%3A//login.hs-osnabrueck.de/nidp/oauth/nam/authz?state%3Dfc12c0f2f3574663a7b4e551d895e459%26scope%3Dopenid%2Bemail%2Bprofile%2Bgroup%26response_type%3Dcode%26approval_prompt%3Dauto%26redirect_uri%3Dhttps%3A//intranet.hs-osnabrueck.de/%26client_id%3D8bc1fd38-d226-4c41-ab28-5ffd1926efec"
+      target="">
+      <img class="access-card"
+           src="/images/pool/95WQ.png">Name/Password
+      - Form
+    </a>
+  </div>
+
+
+  <div id="401" class="menu-option-mark">
+
+    <a
+      href="https://login.hs-osnabrueck.de/nidp/jsp/main.jsp?id=401&sid=1&target=https%3A//login.hs-osnabrueck.de/nidp/oauth/nam/authz?state%3Dfc12c0f2f3574663a7b4e551d895e459%26scope%3Dopenid%2Bemail%2Bprofile%2Bgroup%26response_type%3Dcode%26approval_prompt%3Dauto%26redirect_uri%3Dhttps%3A//intranet.hs-osnabrueck.de/%26client_id%3D8bc1fd38-d226-4c41-ab28-5ffd1926efec"
+      target="">
+      <img class="access-card"
+           src="/images/pool/bVY.png">Secure
+      Name/Password - Basic
+    </a>
+  </div>
+
+
+  <div id="403" class="menu-option-mark">
+
+    <a
+      href="https://login.hs-osnabrueck.de/nidp/jsp/main.jsp?id=403&sid=1&target=https%3A//login.hs-osnabrueck.de/nidp/oauth/nam/authz?state%3Dfc12c0f2f3574663a7b4e551d895e459%26scope%3Dopenid%2Bemail%2Bprofile%2Bgroup%26response_type%3Dcode%26approval_prompt%3Dauto%26redirect_uri%3Dhttps%3A//intranet.hs-osnabrueck.de/%26client_id%3D8bc1fd38-d226-4c41-ab28-5ffd1926efec"
+      target="">
+      <img class="access-card"
+           src="/images/pool/Ncg.png">Secure
+      Name/Password - Form
+    </a>
+  </div>
+
+
+</div>
+</div>
+
+
+</div>
+
+
+
+<!-- Das von mir -->
+<div id="theNidpContent">
+  <div id="theContentContent">
+    <script src="//javascript/login_util.js"></script>
+    <script>
+      // Hier folgen die JavaScript-Funktionen
+      // ...
+
+      // onload-Funktion
+      // ...
+    </script>
+
+    <form id="IDPLogin" name="IDPLogin" enctype="application/x-www-form-urlencoded" method="POST" action="https://login.hs-osnabrueck.de/nidp/app/login?sid=1&amp;sid=1" autocomplete="off">
+      <input type="hidden" name="option" value="credential">
+      <div id="namepassword" class="content login-page" style="margin: 25px; display: block;">
+        <div class="signin-div">
+          <div class="input-signin-username"><input type="text" id="Ecom_User_ID" name="Ecom_User_ID" tabindex="1" value="" placeholder="Benutzername"></div>
+        </div>
+        <div class="signin-div">
+          <div class="input-signin-password"><input type="password" id="Ecom_Password" name="Ecom_Password" tabindex="2" placeholder="Passwort"></div>
+        </div>
+        <div class="closure-but signin-div">
+          <span class="nam-signin-but action-but" name="loginButton2" id="loginButton2" tabindex="3">Anmelden</span>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script>
+    // JavaScript für das Laden des Inhalts
+    // ...
+  </script>
+</div>
+
+
+<div id="globalMessage"></div>
+
+<div id="hsos-footer">
+  <div id="hsos_helpdesk">
+
+    <a href="https://my.hs-osnabrueck.de/sspr/public/ForgottenPassword" target="_blank">Passwort
+      vergessen?</a></br></br>
+    <a target="_blank" href="https://www.hs-osnabrueck.de/servicedesk">ServiceDesk</a></br><a
+    href="mailto:servicedesk@hs-osnabrueck.de">servicedesk@hs-osnabrueck.de</a></br>+49 (0) 541 - 969 7100</br></br>
+  </div>
+  <div id="hsos_impressum">
+    <!-- test -->
+    <a href="https://www.hs-osnabrueck.de/de/impressum/" target="_blank">Impressum</a>
+  </div>
+</div>
+
+</body>
+</html>

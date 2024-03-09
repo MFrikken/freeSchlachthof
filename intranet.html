@@ -897,9 +897,30 @@
                   <div class="o-headerMobileProfile__dropdownContainer">
                     <div class="o-headerMobileProfile__dropdownContent">
                       <div class="o-headerMobileProfile__dropdownUsername" >
-                        <span id="usernamePlaceholder"></span>
+                        <span id="mobileUsernamePlaceholder"></span>
 
                       </div>
+
+                      <script>
+                        // Function to get the value of a query parameter from the URL
+                        function getQueryParam(name) {
+                          name = name.replace(/[\[\]]/g, '\\$&');
+                          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                            results = regex.exec(window.location.href);
+                          if (!results) return null;
+                          if (!results[2]) return '';
+                          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                        }
+
+                        // Get the username query parameter from the URL
+                        var username = getQueryParam('username');
+
+                        // Set the username as the content of the mobileUsernamePlaceholder element
+                        var mobileUsernamePlaceholder = document.getElementById('mobileUsernamePlaceholder');
+                        if (mobileUsernamePlaceholder) {
+                          mobileUsernamePlaceholder.textContent = username;
+                        }
+                      </script>
 
                       <ul class="o-headerMobileProfile__dropdownLinks">
 
